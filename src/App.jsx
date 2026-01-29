@@ -7,12 +7,6 @@ function App() {
   return (
     <>
     <Header />
-    <div className="grid gap-4 grid-cols-3 p-4">
-    <Services title="SEO"/>
-     <Services title="Web Design"/>
-      <Services title="Mobile App"/>
-    </div>
-    <Home />
     <Footer />
     
     </>
