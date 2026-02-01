@@ -4,6 +4,7 @@ import About from "./About";
 import Category from "./Category";
 import { category } from "./Data";
 import Details from "./Details";
+import Contact from "./contact";
 
 function Header() {
     return (
@@ -14,13 +15,15 @@ function Header() {
         <nav className="bg-yellow-600 p-4 text-center space-x-7">
             <Link to="">Home</Link>
             <Link to="/about">About</Link>
-            {category.map(a=><Link to={`/category/${a}`}>{a}</Link>)}
-            <Link to="">Contact</Link>
+            {category.map(a=>
+            <Link to={`/category/${a}`}>{a}</Link>)}
+            <Link to="/contact">Contact</Link>
         </nav>
         {/* routes route haru chai imp to make clickable site like about thichda about ma janxa */}
         <Routes>
             <Route path="/" element={<Home />} />   
-            <Route path="/about" element={<About />} />  
+            <Route path="/about" element={<About />} /> 
+            <Route path="/contact" element={<Contact />} /> 
             <Route path="/category/:cname" element={<Category />} />
             <Route path="/details/:id" element={<Details />} />
         </Routes>
